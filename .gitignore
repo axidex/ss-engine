@@ -1,0 +1,27 @@
+# python auxiliary
+
+__pycache__
+.venv*
+venv*
+.pytest_cache
+.ruff_cache
+
+# Folders
+
+target
+logs
+test-project
+
+# Secrets
+
+secrets
+user
+pass
+
+cert
+
+# grpc
+*_pb2.py
+*_pb2_grpc.py
+
+.idea

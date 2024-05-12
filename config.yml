@@ -1,0 +1,48 @@
+path_to_ds_bin: .venv_deepsecrets/bin/deepsecrets
+path_to_gl_bin: .
+
+logpath: ./logs
+
+app:
+  port: 5000
+
+tmp: ./tmp
+
+prefixes_to_remove: ["tmp"]
+
+ds:
+  args:
+    - --process-count
+    - '10'
+    - --verbose
+#    - --semantic-analysis
+#    - disable
+
+  timeout: 60
+  max_unpacked_size: 300
+
+gl:
+  args:
+    - -f
+    - json
+    - --exit-code
+    - '0'
+    - --no-git
+    - -c
+    - ./rules/default.toml
+
+  timeout: 60
+
+
+max_unpacked_size: 300
+
+
+db:
+  host: "0.0.0.0"
+  port: "5433"
+  database: "orch"
+
+secrets:
+  postgres:
+    username: "secrets/user"
+    password: "secrets/pass"

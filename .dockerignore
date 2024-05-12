@@ -1,0 +1,9 @@
+__pycache__
+.venv
+venv
+config.yml
+front_tools.yml
+pass
+user
+log.ini
+log.debug.ini
